@@ -1,24 +1,27 @@
-let someString = '';
-const reloadAndTry = ' Перезавантажте сторінку, та спробуйте ще раз !!!';
+let someString = "";
+const reloadAndTry = " Перезавантажте сторінку, та спробуйте ще раз !!!";
 
-const lengthArray = prompt('Задайте довжину масиву');
+const lengthArray = prompt("Задайте довжину масиву");
 
 switch (lengthArray) {
   case null:
-    alert('Ви скасували.' + reloadAndTry);
+    alert("Ви скасували." + reloadAndTry);
     break;
-  case '':
-    alert('Ви ввели пусту строку.' + reloadAndTry);
+  case "":
+    alert("Ви ввели пусту строку." + reloadAndTry);
     break;
   default:
     switch (isNaN(+lengthArray)) {
       case true:
-        alert('Ви ввели не число.' + reloadAndTry);
+        alert("Ви ввели не число." + reloadAndTry);
         break;
       default:
         switch (+lengthArray) {
           case 0:
-            alert('Ви вели довжину масиву 0, ви не можете додати елементи.' + reloadAndTry);
+            alert(
+              "Ви вели довжину масиву 0, ви не можете додати елементи." +
+                reloadAndTry
+            );
             break;
           default:
             someString = prompt(
@@ -48,9 +51,6 @@ switch (lengthArray) {
                 } елементів, а потрібно було ввести ${lengthArray} !!! ${reloadAndTry}`
               );
             }
-            break;
         }
-        break;
     }
-    break;
 }
