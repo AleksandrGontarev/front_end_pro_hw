@@ -14,7 +14,7 @@ console.log(
 
 const arrSortMin = arr.slice().sort((a, b) => a - b);
 const minElement = arrSortMin[0];
-const indexMinElement = arr.findIndex((index) => index == minElement);
+const indexMinElement = arr.findIndex((item) => item == minElement);
 console.log(
   `\nMin element: ${minElement} \nIndex min element: ${indexMinElement}`
 );
@@ -23,7 +23,7 @@ console.log(
 
 const arrSortMax = arr.slice().sort((a, b) => b - a);
 const maxElement = arrSortMax[0];
-const indexMaxEliment = arr.findIndex((index) => index === maxElement);
+const indexMaxEliment = arr.findIndex((item) => item === maxElement);
 console.log(
   `\nMax element: ${maxElement} \nIndex max element: ${indexMaxEliment}`
 );
