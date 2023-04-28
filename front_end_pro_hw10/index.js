@@ -31,9 +31,20 @@ console.log(
 /****************   4  *****************/
 
 const quantityNegativeElements = arrSortMin.length;
-console.log(`\nQuantity of negative elements: ${quantityNegativeElements}`)
+console.log(`\nQuantity of negative elements: ${quantityNegativeElements}`);
 
 /****************   5  *****************/
 
-const productNumbers = arr.filter(item => item > 0).reduce((product, item) => product * item, 1);
+const productNumbers = arr
+  .filter((item) => item > 0)
+  .reduce((product, item) => product * item, 1);
 console.log(`\nProduct of postive numbers: ${BigInt(productNumbers)}`);
+
+/*********************************************/
+const minn = arr.reduce(function (min, item,index1,arr1) {
+  if (min >= item) {
+    min = item;
+  }
+  return `${min}, ${index1}`;
+});
+console.log(minn);
