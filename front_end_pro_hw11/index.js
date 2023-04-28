@@ -1,5 +1,6 @@
 const array = [1, 2, 3, 4, 5, 6, 7];
-removeElement(array, 5);
+removeElement(array, 11);
+console.log(array);
 
 function removeElement(array, element) {
   let index = array.findIndex((item) => item == element);
@@ -10,4 +11,4 @@ function removeElement(array, element) {
   }
 }
 
-console.log(array);
+
