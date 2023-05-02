@@ -60,12 +60,12 @@ let sum = 0;
 for (i of users) {
     if (Number(i.balance.slice(1).replace(',', '')) > 2000) {
         arrayPhone.push(i.phone);
-        chek++;
+        checkBalance++;
     };
     sum += Number(i.balance.slice(1).replace(',', ''));
 
 }
 if (!checkBalance) { console.log("No balance more than 2000") };
 
-console.log(arrayPhone);
+console.log("Array phone:",arrayPhone);
 console.log(`Summ all balance: ${Math.round(sum*100)/100}`);
