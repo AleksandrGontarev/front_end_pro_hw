@@ -58,11 +58,12 @@ let checkBalance = false;
 const arrayPhone = [];
 let sum = 0;
 for (i of users) {
-    if (Number(i.balance.slice(1).replace(',', '')) > 2000) {
+    let clearBalance = Number(i.balance.slice(1).replace(',', ''));
+    if (clearBalance > 2000) {
         arrayPhone.push(i.phone);
         checkBalance = true;
     };
-    sum += Number(i.balance.slice(1).replace(',', ''));
+    sum += clearBalance;
 
 }
 (!checkBalance) ? console.log("No balance more than 2000$") : console.log("Array phone:",arrayPhone);;
