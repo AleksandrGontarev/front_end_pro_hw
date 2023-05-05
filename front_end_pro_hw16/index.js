@@ -6,7 +6,7 @@ function externalFunction(elementExternal) {
 
 const closingFunction = externalFunction(0);
 
-console.log(closingFunction(3));
-console.log(closingFunction(5));
-console.log(closingFunction(20));
+console.log(`sum(3) = ${closingFunction(3)}`);
+console.log(`sum(5) = ${closingFunction(5)}`);
+console.log(`sum(20) = ${closingFunction(20)}`);
 
