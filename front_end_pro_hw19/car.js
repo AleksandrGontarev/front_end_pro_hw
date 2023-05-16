@@ -1,5 +1,4 @@
-import { Human } from "../human/human.js";
-export class Car {
+export default class Car {
     constructor(brand, model, year, color) {
         this.brand = brand;
         this.model = model;
@@ -17,12 +16,16 @@ export class Car {
     }
 
     showInfoCar() {
-        console.log(`
-Brand: ${this.brand}
+        console.group("Car");
+        console.log(`Brand: ${this.brand}
 Model: ${this.model}
 Year: ${this.year}
 Color: ${this.color}
 `)
-        // human.showHuman()
+        console.groupEnd();
+
+        this.owner.showHuman()
+       
+
     }
 }

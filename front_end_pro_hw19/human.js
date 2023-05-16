@@ -1,15 +1,14 @@
-class Human {
+export default class Human {
     constructor(name, age) {
         this.name = name;
         this.age = age;
     }
 
     showHuman() {
-        console.log(`
-Name: ${this.name}
+        console.group("Owner");
+        console.log(`Name: ${this.name}
 Age: ${this.age}
 `)
+console.groupEnd();
     }
 }
-
-export default {Human}
