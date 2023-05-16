@@ -1,4 +1,4 @@
-class Apartment {
+ export class Apartment {
 
     residents = [];
 
@@ -6,4 +6,3 @@ class Apartment {
         this.residents.push(human);
     }
 }
-export { Apartment }

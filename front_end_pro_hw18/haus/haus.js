@@ -1,4 +1,4 @@
-class Haus {
+ export class Haus {
 
     constructor(limitApartments) {
         this.limitApartments = limitApartments;
@@ -14,4 +14,3 @@ class Haus {
 
     }
 }
-export { Haus }

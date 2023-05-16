@@ -1,4 +1,4 @@
-class Human {
+ export class Human {
 
     constructor(firstName, gender) {
         this.gender = gender;
@@ -6,4 +6,3 @@ class Human {
     }
 
 }
-export { Human }
