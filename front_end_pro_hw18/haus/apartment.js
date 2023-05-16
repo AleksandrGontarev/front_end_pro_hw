@@ -1,9 +1,7 @@
 import { Human } from "./human.js";
 class Apartment {
 
-    constructor(residents = []) {
-        this.residents = residents;
-    }
+    residents = [];
 
     addResidents(human) {
         this.residents.push(human);
