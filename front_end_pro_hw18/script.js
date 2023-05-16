@@ -18,3 +18,5 @@ apartment510.addResidents(human3);
 let hausFirst = new Haus(2);
 hausFirst.addApartment(apartment512);
 hausFirst.addApartment(apartment510);
+
+console.log(hausFirst);
