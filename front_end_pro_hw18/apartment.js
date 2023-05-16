@@ -1,4 +1,4 @@
- export class Apartment {
+ export default class Apartment {
 
     residents = [];
 

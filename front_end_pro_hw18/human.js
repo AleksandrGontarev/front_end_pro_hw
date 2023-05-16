@@ -1,4 +1,4 @@
- export class Human {
+ export default class Human {
 
     constructor(firstName, gender) {
         this.gender = gender;

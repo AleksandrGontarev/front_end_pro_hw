@@ -1,4 +1,4 @@
- export class Haus {
+ export default class Haus {
 
     constructor(limitApartments) {
         this.limitApartments = limitApartments;
@@ -6,10 +6,11 @@
     }
 
     addApartment(apartment) {
-        if (this.apartmentsAll.length < this.limitApartments) {
+        if (this.apartmentsAll.length <= this.limitApartments-1 ) {
             this.apartmentsAll.push(apartment);
         } else {
             console.log("The number of apartments is exceeded");
+            return;
         }
 
     }
