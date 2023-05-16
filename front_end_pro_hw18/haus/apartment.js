@@ -1,4 +1,3 @@
-import { Human } from "./human.js";
 class Apartment {
 
     residents = [];
