@@ -1,8 +1,8 @@
 class Haus {
 
-    constructor(limitApartments, apartmentsAll = []) {
+    constructor(limitApartments) {
         this.limitApartments = limitApartments;
-        this.apartmentsAll = apartmentsAll;
+        this.apartmentsAll = [];
     }
 
     addApartment(apartment) {
