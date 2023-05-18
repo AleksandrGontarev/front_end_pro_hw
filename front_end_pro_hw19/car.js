@@ -1,3 +1,4 @@
+
 export default class Car {
     constructor(brand, model, year, color) {
         this.brand = brand;
@@ -8,10 +9,14 @@ export default class Car {
     }
 
     assignOwner(human) {
-        if (human.age > 18) {
-            this.owner = human;
-        } else {
-            console.log("The owner is not 18 years old");
+        try {
+            if (human.age > 18) {
+                this.owner = human;
+            } else {
+                console.log("The owner is not 18 years old");
+            }
+        } catch (e) {
+            console.log("error, method .age does not exist");
         }
     }
 
@@ -24,8 +29,12 @@ Color: ${this.color}
 `)
         console.groupEnd();
 
-        this.owner.showHuman()
-       
+        try {
+        this.owner.showHuman()}
+        catch (e) {
+            console.log("error, owner does not exist")
+        }
+
 
     }
 }

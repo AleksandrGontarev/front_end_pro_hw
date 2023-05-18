@@ -7,7 +7,7 @@ const human2 = new Human("Anna", 37);
 const bmw = new Car("BMW", "X5", 2020, "black");
 const shevrolet = new Car("Shevrolet", "Camaro", 1980, "yellow");
 
-bmw.assignOwner(human2);
+bmw.assignOwner();
 shevrolet.assignOwner(human);
 
 bmw.showInfoCar()
