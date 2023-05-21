@@ -1,4 +1,4 @@
-const body = document.querySelector('.body');
+const body = document.querySelector('body');
 const table = document.createElement('table');
 
 body.insertBefore(table, body.lastChild);
