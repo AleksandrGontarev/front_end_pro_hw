@@ -1,14 +1,5 @@
-.container {
-    display: flex;
-    justify-content: center;
-}
-
-.container a {
-    padding: 30px 100px;
-    background-color: aquamarine;
-    border: 3px solid black;
-    border-radius: 30px;
-    margin: 0 30px;
-    text-decoration: none;
+.input {
     font-size: 24px;
 }
+
+

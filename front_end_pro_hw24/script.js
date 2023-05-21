@@ -1,12 +1,14 @@
-let button1 = document.querySelector('.button1');
-let button2 = document.querySelector('.button2');
+import ChangeInputValue from "./change_input.js";
+import createButton from "./create_btn.js";
 
-function https(elem){
-if (elem.protocol != 'https:'){
-    console.log("NOT https")
-} else {
-    console.log();
-}
-}
+const input = document.querySelector('.input');
 
-https(button1);
+createButton('https', "yellow");
+createButton('http', 'red');
+
+document.querySelector('.button-https').addEventListener('click', function change(){new ChangeInputValue('https', 'http').value(input)}
+);
+
+document.querySelector('.button-http').addEventListener('click', function change(){new ChangeInputValue('http', 'https').value(input)}
+);
+
