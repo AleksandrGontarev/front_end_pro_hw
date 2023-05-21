@@ -1,8 +1,18 @@
-import {addElement, removeElement} from './element_control.js';
+const div = document.querySelector(".div");
+const text = document.querySelector(".text");
 
-let text = document.querySelector('.container__text');
+text.addEventListener("focus", show);
+text.addEventListener("blur", doNotShow);
 
-text.addEventListener('mouseover', addElement);
-text.addEventListener('mouseout', removeElement);
+function show(){
+    div.style.display = "block";
+}
+
+function doNotShow(){
+    div.style.display = "none";
+}
+
+
+
 
 

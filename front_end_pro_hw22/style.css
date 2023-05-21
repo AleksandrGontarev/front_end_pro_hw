@@ -8,5 +8,9 @@
 }
 
 .container {
-    display: block;
+    display: flex;
+}
+
+.div {
+    display: none;
 }
