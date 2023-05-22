@@ -8,4 +8,5 @@ padding: 10px
     check.innerText = `Check ${btnClass}`;
     check.classList.add(`button-${btnClass}`);
     document.querySelector('.container').append(check);
+    check.setAttribute('target', '_blank');
 }
