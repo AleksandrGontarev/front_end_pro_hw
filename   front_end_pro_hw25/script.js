@@ -19,7 +19,7 @@ for (item of allEmojiArray) {
 
 function createVoiceCard(emojiDec, container, showVoice) {
     let divCard = document.createElement('div');
-    divCard.setAttribute('class', container);
+    divCard.setAttribute('class', 'answers__card');
     divCard.innerHTML = `<button type="button" class="answers__btn btn-${emojiDec}">&#${emojiDec}</button>
     <p class="answers__voice voice-${emojiDec}" style="display: ${showVoice}">0</p>`;
     document.querySelector(container).appendChild(divCard);
