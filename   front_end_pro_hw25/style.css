@@ -34,6 +34,7 @@
     display: grid;
     column-gap: 10px;
     grid-template-columns: repeat(auto-fit, 60px);
+    text-align: center;
 }
 
 .answers__card {
