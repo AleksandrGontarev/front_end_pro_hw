@@ -1,7 +1,7 @@
 import Hamburger from "./hamburger.js";
 
 // маленький гамбургер з начинкою з сиру
-var hamburger = new Hamburger(Hamburger.SIZE_SMALL, Hamburger.STUFFING_CHEESE);
+let hamburger = new Hamburger(Hamburger.SIZE_SMALL, Hamburger.STUFFING_CHEESE);
 
 // добавка з майонезу
 hamburger.addTopping(Hamburger.TOPPING_MAYO);
