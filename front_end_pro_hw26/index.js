@@ -5,14 +5,14 @@ import { chooseProduct } from "./choose_product.js";
 import { createCategory } from "./create_category.js";
 
 const category = parseCategory(productList);
-const categoryList = document.querySelector('.category__list');
-let products = document.querySelector('.products__list');
-let productCharacters = document.querySelector('.product-characters');
-let productsListByCategory = [];
+const categoryTag = document.querySelector('.category__list');
+const productsTag = document.querySelector('.products__list');
+const productCharacters = document.querySelector('.product-characters');
+const productsListByCategory = [];
 
-createCategory(category, categoryList);
+createCategory(category, categoryTag);
 
-chooseCategory(categoryList, products, productsListByCategory, productList);
+chooseCategory(categoryTag, productsTag, productsListByCategory, productList);
 
-chooseProduct(products, productCharacters, productList,);
+chooseProduct(productsTag, productCharacters, productList,);
 
