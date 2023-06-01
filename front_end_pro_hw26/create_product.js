@@ -1,23 +1,23 @@
 
 class Product {
-    constructor(name, characters, categories) {
-        this.name = name,
+    constructor(name, characters, category) {
+            this.name = name,
             this.characters = characters,
-            this.categories = categories
+            this.category = category
     }
 }
 
-let categories = ["red", "green", "blue"];
+let category = ["red", "green", "blue"];
 let productsName = ["First", "Second"];
 
-function productCreate(categories, productsName) {
+function productCreate(category, productsName) {
 
     let productsList = [];
 
-    for (let i in categories) {
+    for (let i in category) {
         for (let j in productsName) {
-            let name = categories[i] + productsName[j] + "Product";
-            let product = new Product(name, `${name}`, categories[i])
+            let name = category[i] + productsName[j] + "Product";
+            let product = new Product(name, `${name}`, category[i])
             productsList.push(product);
         }
     }
@@ -25,6 +25,6 @@ function productCreate(categories, productsName) {
     return productsList;
 }
 
-let productList = productCreate(categories, productsName);
+let productList = productCreate(category, productsName);
 
 export { productList }

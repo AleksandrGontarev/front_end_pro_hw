@@ -1,10 +1,10 @@
-function showCategory(categories, products, productsListByCategory, productList) {
-    categories.addEventListener('click', (event) => {
+function showCategory(category, products, productsListByCategory, productList) {
+    category.addEventListener('click', (event) => {
         if (event.target.closest('.category__item-link')) {
 
             let categoryName = event.target.classList[1].split('-')[1];
 
-            productsListByCategory = productList.filter(item => item.categories === categoryName);
+            productsListByCategory = productList.filter(item => item.category === categoryName);
             if (document.querySelectorAll('.products__item')) {
                 document.querySelectorAll('.products__item').forEach(elem => elem.remove())
             }
