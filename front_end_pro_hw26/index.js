@@ -1,26 +1,25 @@
 import { productList } from "./create_product.js";
-import { findCategories } from "./find_categories.js";
-import { showCategories } from "./show_categories.js";
+import { findCategory } from "./find_category.js";
+import { showCategory } from "./show_category.js";
 import { LoremIpsum } from "./lorem-ipsum.js";
 
-const categoriesList = findCategories(productList);
-const renderCategories = document.querySelector('.categories__list');
-const renderProducts = document.querySelector('.products__list');
+const getCategory = findCategory(productList);
+const categoryList = document.querySelector('.category__list');
 let products = document.querySelector('.products__list');
 let productCharacters = document.querySelector('.product-characters');
-let productsListCategories = [];
+let productsListByCategory = [];
 const lipsum = new LoremIpsum();
 
 
 
-for (let item of categoriesList) {
+for (let item of getCategory) {
     let categori = document.createElement('li');
-    categori.setAttribute('class', 'categories__item');
-    categori.innerHTML = `<a class="categories__item-link categories-${item}" href="#">${item}</a>`;
-    renderCategories.appendChild(categori);
+    categori.setAttribute('class', 'category__item');
+    categori.innerHTML = `<a class="category__item-link category-${item}" href="#">${item}</a>`;
+    categoryList.appendChild(categori);
 }
 
-showCategories(renderCategories, products, productsListCategories, productList);
+showCategory(categoryList, products, productsListByCategory, productList);
 
 
 
@@ -30,7 +29,7 @@ showCategories(renderCategories, products, productsListCategories, productList);
 
 
 
-renderProducts.addEventListener('click', (event) => {
+products.addEventListener('click', (event) => {
     if (event.target.closest('.products__item-link')) {
 
         let productName = event.target.classList[1].split('-')[1];
