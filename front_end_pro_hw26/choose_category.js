@@ -1,4 +1,4 @@
-function showCategory(category, products, productsListByCategory, productList) {
+function chooseCategory(category, products, productsListByCategory, productList) {
     category.addEventListener('click', (event) => {
         if (event.target.closest('.category__item-link')) {
 
@@ -20,4 +20,4 @@ function showCategory(category, products, productsListByCategory, productList) {
     )
 }
 
-export {showCategory}
+export {chooseCategory}

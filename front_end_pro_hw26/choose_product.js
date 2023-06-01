@@ -1,7 +1,9 @@
 import { LoremIpsum } from "./lorem-ipsum.js";
+import { buyProduct } from "./buy_product.js";
+
 const lipsum = new LoremIpsum();
 
-function showProduct(products, productCharacters, productList) {
+function chooseProduct(products, productCharacters, productList) {
     products.addEventListener('click', (event) => {
         if (event.target.closest('.products__item-link')) {
 
@@ -18,17 +20,11 @@ function showProduct(products, productCharacters, productList) {
             }
             productCharacters.appendChild(productCharactersItem);
 
-            let buy = document.querySelector('.product-characters');
-            buy.addEventListener('click', (event) => {
-                    if (event.target.closest('.product-characters__btn')) {
-                        alert(`Product ${event.target.id} add to basket`);
-                        window.location.reload();
-                    }
-            }
-            );
+            let selectedProduct = document.querySelector('.product-characters');
+            buyProduct(selectedProduct);
 
 
         }
     });
 }
-export { showProduct }
+export { chooseProduct }
