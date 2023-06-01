@@ -9,21 +9,19 @@ function chooseProduct(products, productCharacters, productList) {
 
             let productName = event.target.classList[1].split('-')[1];
             let productCharactersItem = document.createElement('div');
-            let productCharactersText = productList.find(item => item.name === productName).characters;
+            let productCharactersName = productList.find(item => item.name === productName).characters;
 
             productCharactersItem.setAttribute('class', 'product-characters__body');
-            productCharactersItem.innerHTML = `<p class="product-characters__header">${productCharactersText}</p>
+            productCharactersItem.innerHTML = `<p class="product-characters__header">${productCharactersName}</p>
             <p class="product-characters__text">${lipsum.generate(50)}</p>
-            <button type="button" class="product-characters__btn" id="${productCharactersText}">Buy</button>`;
+            <button type="button" class="product-characters__btn btn-${productCharactersName}">Buy</button>`;
             if (document.querySelector('.product-characters__body')) {
                 document.querySelector('.product-characters__body').remove();
             }
             productCharacters.appendChild(productCharactersItem);
-
-            let selectedProduct = document.querySelector('.product-characters');
+       
+            let selectedProduct = document.querySelector('.product-characters__btn');
             buyProduct(selectedProduct);
-
-
         }
     });
 }

@@ -1,10 +1,9 @@
 
 function buyProduct(selectedProduct) {
-    selectedProduct.addEventListener('click', (event) => {
-        if (event.target.closest('.product-characters__btn')) {
-            alert(`Product ${event.target.id} add to basket`);
+    selectedProduct.addEventListener('click', (event) => {  
+            let productName = event.target.classList[1].split('-')[1];
+            alert(`Product ${productName} add to basket`);
             window.location.reload();
-        }
     }
     )
 }
