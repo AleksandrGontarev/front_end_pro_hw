@@ -12,16 +12,18 @@ function showProduct(products, productCharacters, productList) {
             productCharactersItem.setAttribute('class', 'product-characters__body');
             productCharactersItem.innerHTML = `<p class="product-characters__header">${productCharactersText}</p>
             <p class="product-characters__text">${lipsum.generate(50)}</p>
-            <button type="button" class="product-characters__btn">Buy</button>`;
+            <button type="button" class="product-characters__btn" id="${productCharactersText}">Buy</button>`;
             if (document.querySelector('.product-characters__body')) {
                 document.querySelector('.product-characters__body').remove();
             }
             productCharacters.appendChild(productCharactersItem);
 
-            let buy = document.querySelector('.product-characters__btn');
-            buy.addEventListener('click', () => {
-                alert("Product add to basket");
-                window.location.reload();
+            let buy = document.querySelector('.product-characters');
+            buy.addEventListener('click', (event) => {
+                    if (event.target.closest('.product-characters__btn')) {
+                        alert(`Product ${event.target.id} add to basket`);
+                        window.location.reload();
+                    }
             }
             );
 

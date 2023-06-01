@@ -8,5 +8,4 @@ function findCategory (productList) {
     return categoryList;
 }
 
-
 export {findCategory}
