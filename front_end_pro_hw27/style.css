@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.posts {
+    font-size: 22px;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+.posts__error-input {
+    padding-left: 30px;
+    visibility: visible;
+}
+
+.posts__input {
+    font-size: 22px;
+}

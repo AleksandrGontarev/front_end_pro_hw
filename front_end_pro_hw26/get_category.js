@@ -1,4 +1,4 @@
-function parseCategory (productList) {
+function getCategory (productList) {
     let categoryList = [];
     for (let item of productList) {
         if (!categoryList.includes(item.category)) {
@@ -8,4 +8,4 @@ function parseCategory (productList) {
     return categoryList;
 }
 
-export {parseCategory}
+export {getCategory}

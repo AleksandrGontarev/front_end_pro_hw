@@ -21,7 +21,7 @@ function chooseProduct(products, productCharacters, productList) {
             productCharacters.appendChild(productCharactersItem);
        
             let selectedProduct = document.querySelector('.product-characters__btn');
-            buyProduct(selectedProduct);
+            buyProduct(selectedProduct, );
         }
     });
 }
