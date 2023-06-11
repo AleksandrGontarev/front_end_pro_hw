@@ -1,6 +1,5 @@
 function createPost(data, postBlock) {
     let postNew = document.createElement('div');
-
     postNew.setAttribute('class', 'posts__item');
     if ((typeof data) === 'object') {
         postNew.innerHTML = `<p class="posts__id">Post Id: ${data.id}</p>

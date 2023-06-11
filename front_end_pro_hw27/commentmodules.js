@@ -9,7 +9,6 @@ async function showComments(value, urlComments, headBlock) {
 }
 
 function createCommentsList(headBlock) {
-    removeElement('.comments__list');
     let commentsList = document.createElement('ul');
     commentsList.setAttribute('class', 'comments__list');
     commentsList.style.paddingLeft = "0";
