@@ -29,4 +29,4 @@ function createComment(data) {
     commentBlock.appendChild(commentNew);
 }
 
-export { showComments, createCommentsList, createComment}
+export { showComments, createCommentsList, createComment }

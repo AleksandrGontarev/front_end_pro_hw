@@ -20,7 +20,7 @@ async function showPost(event) {
             removeElement('.comments__list');
             createPost(postBody, headBlock);
             const postBtn = document.querySelector('.posts__btn');
-            postBtn.addEventListener('click', () => {showComments(value, urlComments, headBlock )});
+            postBtn.addEventListener('click', () => { showComments(value, urlComments, headBlock) });
         } else {
             createPost('No post', headBlock);
         }

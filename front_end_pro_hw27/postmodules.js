@@ -41,4 +41,4 @@ function validatePostId(value) {
     }
 }
 
-export {createPost, validatePostId}
+export { createPost, validatePostId }
