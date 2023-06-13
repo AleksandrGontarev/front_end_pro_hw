@@ -5,7 +5,7 @@ async function showComments(value, urlComments, headBlock) {
     let comments = await getInfo(value, urlComments);
     console.log(comments);
     createCommentsList(headBlock);
-    comments.map((item) => createComment(item))
+    comments.forEach((item) => createComment(item))
 }
 
 function createCommentsList(headBlock) {

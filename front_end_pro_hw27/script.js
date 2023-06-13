@@ -13,7 +13,7 @@ post.addEventListener('change', showPost);
 
 async function showPost(event) {
     let value = event.target.value;
-    if (validatePostId(value, postValidate)) {
+    // if (validatePostId(value, postValidate)) {
         let postBody = await getInfo(value, urlPost);
         if (postBody) {
             removeElement('.posts__item');
@@ -24,7 +24,7 @@ async function showPost(event) {
         } else {
             createPost('No post', headBlock);
         }
-    } else {
-        createPost('', headBlock);
-    }
+    // } else {
+    //     createPost('', headBlock);
+    // }
 }
