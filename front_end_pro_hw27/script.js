@@ -28,3 +28,4 @@ async function showPost(event) {
     //     createPost('', headBlock);
     // }
 }
+
