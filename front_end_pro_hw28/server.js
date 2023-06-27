@@ -1,17 +1,12 @@
 const express = require('express');
 const cors = require('cors');
-const { parse } = require('path');
 const app = express();
+
 app.use(express.json());
-
 app.use(cors());
-
 app.options('*', cors());
 
-// const host = '127.0.0.1';
-// const port = 3000;
-
-const port = process.env.PORT|| 3000;
+const port = 3000;
 const host = 'localhost';
 
 // app.get('/', async (req, res) => {
