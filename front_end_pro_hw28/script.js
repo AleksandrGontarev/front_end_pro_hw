@@ -1,4 +1,4 @@
-const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=`;
+const apiUrl = "http://localhost:3000/";
 
 const data = document.querySelector('.weather__get');
 const btn = document.querySelector('.weather__btn');
@@ -7,26 +7,48 @@ const section = document.querySelector('.weather');
 btn.addEventListener('click', () => data.addEventListener('change', weather));
 
 async function getInfo(value, url) {
-    try {
-        const response = await fetch(url + value);
+    // try {
+        // const response = await fetch(url + value);
+        // const data = await response.json();
+        // console.log('11111111111111');
+        // return data;
+    //     if (!response.ok) {
+    //         throw new Error(`HTTP error! status: ${response.status}`);
+    //     } else {
+    //         const data = await response.json();
+    //         return data;
+    //     }
+    // } catch (err) {
+    //     console.log('Something went wrong >>>>>>', err);
+    // }
 
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        } else {
-            const data = await response.json();
-            return data;
+    try {
+        let res = await fetch(url + value, {
+          mode: 'cors'
+        });
+
+        if (!res.ok) {
+          console.log(res);
+          throw new Error( res.statusText || res.status );
         }
-    } catch (err) {
-        console.log('Something went wrong >>>>>>', err);
-    }
+
+        let data = await res.json();
+        return data;
+        
+      } catch (err) {
+        console.error(err);
+        alert('Произошла ошибка...');
+      }
 }
 
 
 async function weather(event) {
-    let city = `${event.target.value.toUpperCase()}&units=metric&APPID=5d066958a60d315387d9492393935c19`;
+    let city = `${event.target.value.toUpperCase()}`;
     let body = await getInfo(city, apiUrl);
-    
+  
+ console.log(body);
     if (body.cod === 200) {
+
         removeElement('.weather__show');
         let weatherBody = document.createElement('div');
         weatherBody.setAttribute('class', 'weather__show');
@@ -57,3 +79,5 @@ function removeElement(elemClass) {
         elem.remove();
     }
 }
+
+
