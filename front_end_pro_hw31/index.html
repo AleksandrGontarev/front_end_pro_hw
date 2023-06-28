@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <form class="some-form" action="#" name="main">
+            <fieldset style="width: max-content; background-color: beige;" onsubmit="showTable()">
+                <legend>Form</legend>
+                <label for="firstname">First name:</label>
+                <input id="firstname" type="text" name="firstname">
+
+                <label for="lastname">Last name:</label>
+                <input id="lastname" type="text" name="lastname">
+
+                <label for="date">Date of birth:</label>
+                <input id="date" type="date" name="date"><br><br>
+
+                <label for="radio">Please select your gender:</label><br>
+                <input class="radio-gender" id="male" type="radio" name="gender" value="male">
+                <label for="male">Male</label>
+                <input class="radio-gender" id="female" type="radio" name="gender" value="female">
+                <label for="female">Female</label><br><br>
+
+                <label for="city">City:</label>
+                <select name="city" id="city">
+                    <option value="kharkiv">Kharkiv</option>
+                    <option value="newyork">New York</option>
+                    <option value="barcelona">Barcelona</option>
+                    <option value="berlin">Berlin</option>
+                </select><br><br>
+
+                <label for="adress">Adress:</label>
+                <textarea id="adress" name="adress" cols="30" rows="5" placeholder="Your adress"
+                    style="resize: none;"></textarea><br><br>
+
+                <label for="checkbox">Languages:</label><br>
+                <input class="languages" type="checkbox" name="languages" id="english" value="english">
+                <label for="english">English</label><br>
+
+                <input class="languages" type="checkbox" name="languages" id="german" value="german">
+                <label for="german">German</label><br>
+
+                <input class="languages" type="checkbox" name="languages" id="spanish" value="spanish">
+                <label for="spanish">Spanish</label><br>
+
+                <input class="languages" type="checkbox" name="languages" id="ukranian" value="ukranian">
+                <label for="ukranian">Ukranian</label><br><br>
+
+                <button type="submit" id="submit-form"
+                    style="padding: 5px 25px; margin: 0 auto; display: flex; background-color: rgb(118, 241, 118);">Save</button>
+            </fieldset>
+        </form>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
+
+<!-- Ім'я, Прізвище (Текстові поля)
+Дата народження (Текстове поле)
+Стать (radio)
+Місто (select)
+Адреса (textarea)
+Мови, якими володіє (checkbox)
+….
+Кнопка “Зберегти” -->
