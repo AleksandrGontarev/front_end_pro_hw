@@ -23,7 +23,7 @@
                 <label for="date">Date of birth:</label>
                 <input id="date" type="date" name="date"><br><br>
 
-                <label for="radio">Please select your gender:</label><br>
+                <label class="gender-label" for="radio">Please select your gender:</label><br>
                 <input class="radio-gender" id="male" type="radio" name="gender" value="male">
                 <label for="male">Male</label>
                 <input class="radio-gender" id="female" type="radio" name="gender" value="female">
@@ -41,7 +41,7 @@
                 <textarea id="adress" name="adress" cols="30" rows="5" placeholder="Your adress"
                     style="resize: none;"></textarea><br><br>
 
-                <label for="checkbox">Languages:</label><br>
+                <label class="languages-label" for="checkbox">Languages:</label><br>
                 <input class="languages" type="checkbox" name="languages" id="english" value="english">
                 <label for="english">English</label><br>
 
@@ -59,16 +59,7 @@
             </fieldset>
         </form>
     </div>
-    <script src="./script.js"></script>
+    <script type="module" src="./script.js"></script>
 </body>
 
 </html>
-
-<!-- Ім'я, Прізвище (Текстові поля)
-Дата народження (Текстове поле)
-Стать (radio)
-Місто (select)
-Адреса (textarea)
-Мови, якими володіє (checkbox)
-….
-Кнопка “Зберегти” -->
