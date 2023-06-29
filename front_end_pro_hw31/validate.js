@@ -78,7 +78,7 @@ function errorMap(errorMsg) {
 
 function validateArray(arr) {
     let arrayChekedFalse = [];
-    arrayChekedFalse = Array.from(arr).filter(elem => elem.checked == true);
+    arrayChekedFalse = [...arr].filter(elem => elem.checked == true);
     if (!arrayChekedFalse.length) {
         return true;
     }
@@ -91,7 +91,7 @@ function addColorError(elem) {
 
 function filterChekedList(incomingArr) {
     let result = [];
-    let newArr = Array.from(incomingArr).filter(elem => elem.checked != false);
+    let newArr = [...incomingArr].filter(elem => elem.checked != false);
     newArr.forEach(elem => result.push(elem.value));
     return result;
 }
