@@ -6,7 +6,7 @@ const form = document.forms.main;
 
 function showTable(event) {
     event.preventDefault();
-    if (validateForm() == false) {
+    if (validateForm() === false) {
         hideForm();
         creatTable();
         addElementsInTable(form);
