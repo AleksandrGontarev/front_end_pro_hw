@@ -77,10 +77,8 @@ function errorMap(errorMsg) {
 }
 
 function validateArray(arr) {
-    let clearArray = changeCheckedList(arr);
     let arrayChekedFalse = [];
-
-    arrayChekedFalse = clearArray.filter(elem => elem.checked == true);
+    arrayChekedFalse = Array.from(arr).filter(elem => elem.checked == true);
     if (!arrayChekedFalse.length) {
         return true;
     }
@@ -93,18 +91,9 @@ function addColorError(elem) {
 
 function filterChekedList(incomingArr) {
     let result = [];
-    let arr = changeCheckedList(incomingArr);
-    let newArr = arr.filter(elem => elem.checked != false);
+    let newArr = Array.from(incomingArr).filter(elem => elem.checked != false);
     newArr.forEach(elem => result.push(elem.value));
     return result;
 }
 
-function changeCheckedList(arr) {
-    let arrNew = [];
-    arr.forEach(element => {
-        arrNew.push(element);
-    });
-    return arrNew;
-}
-
-export { validateForm, validateArray, errorMap, addColorError, changeCheckedList, filterChekedList }
+export { validateForm, validateArray, errorMap, addColorError, filterChekedList }
