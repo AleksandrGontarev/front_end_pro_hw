@@ -1,3 +1,5 @@
+import { closeWindow } from "./close_window.js";
+
 let containerError = document.querySelector('.error');
 
 function validateForm() {
@@ -35,12 +37,7 @@ function showError(elem) {
     error.setAttribute('class', 'error-item');
     error.innerText = `${elem}`;
     containerError.appendChild(error);
-    closeError();
-}
-
-function closeError() {
-    let closeBtn = document.querySelector('.error-btn');
-    closeBtn.addEventListener('click', () => { containerError.style.display = 'none' })
+    closeWindow('.error-btn', containerError);
 }
 
 function removeElement(elemClass) {
@@ -77,4 +74,4 @@ function addColorError(elem) {
     setTimeout(() => { elem.style.background = 'white' }, 3000);
 }
 
-export { validateForm, errorMap, addColorError, closeError }
+export { validateForm, errorMap, addColorError, removeElement }
