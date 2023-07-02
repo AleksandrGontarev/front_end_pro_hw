@@ -70,3 +70,56 @@ li {
 .product-characters__btn:hover {
     background-color: greenyellow;
 }
+
+.some-form {
+    display: none;
+}
+
+.error {
+    font-size: 24px;
+    position: fixed;
+    left: 35%;
+    top: 0;
+    display: none;
+    width: 30%;
+    height: 30%;
+    background-color: rgb(233, 149, 153);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 1;
+    visibility: visible;
+    
+}
+.error-close{
+    display: none;
+}
+.error-item {
+    display: block;
+}
+
+.error-item:first-of-type {
+    padding-top: 40px;
+}
+
+.error-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+}
+
+.error-btn:hover {
+background-color: goldenrod;
+}
+
+.info-container {
+    font-size: 24px;
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 50%;
+    background-color: beige;
+}
