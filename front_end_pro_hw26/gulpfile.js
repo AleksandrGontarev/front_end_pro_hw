@@ -62,11 +62,6 @@ gulp.task('optimize-images', function () {
         .pipe(gulp.dest('dist/img'));
 });
 
-gulp.task('copy-dist', function (done) {
-    gulp.src('app/fonts/**/*.*')
-        .pipe(gulp.dest('dist/fonts'));
-    done();
-});
 
 gulp.task('default', gulp.parallel('minifyConcatScripts', 'sass', 'concatCss', 'server')); 
-gulp.task('build', gulp.series('clean', 'minifyConcatScripts', 'sass', 'concatCss', 'optimize-images', 'copy-dist')); 
+gulp.task('build', gulp.series('clean', 'minifyConcatScripts', 'sass', 'concatCss', 'optimize-images')); 
