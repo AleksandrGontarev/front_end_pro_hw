@@ -1,0 +1,40 @@
+.error {
+    font-size: 24px;
+    position: fixed;
+    left: 25%;
+    top: 0;
+    display: none;
+    width: 50%;
+    height: 30%;
+    background-color: red;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 1;
+    visibility: visible;
+
+    &-close {
+        display: none;
+    }
+
+    &-item {
+        display: block;
+    }
+
+    &-item:first-of-type {
+        padding-top: 40px;
+    }
+
+    &-btn {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50px;
+        height: 50px;
+    }
+
+    &-btn:hover {
+        background-color: goldenrod;
+    }
+}

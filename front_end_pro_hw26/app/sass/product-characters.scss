@@ -1,0 +1,17 @@
+.product-characters {
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+        text-align: center;
+        padding-bottom: 15px;
+    }
+
+    &__btn {
+        padding: 5px 30px;
+        border-radius: 7px;
+        margin: 15px auto;
+        display: block;
+        cursor: pointer;
+    }
+}
