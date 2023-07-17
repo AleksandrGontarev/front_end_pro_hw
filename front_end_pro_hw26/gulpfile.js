@@ -5,17 +5,25 @@ const gulp = require('gulp'),
     sass = require('gulp-sass')(require('sass')),
     clean = require('gulp-clean'),
     imagemin = require('gulp-imagemin'),
+    htmlMin = require('gulp-htmlmin'),
     browserSync = require('browser-sync');
 
-gulp.task('minifyConcatScripts', function () {
-    return gulp.src('app/js/*.js')
+gulp.task('js', function () {
+    return gulp.src('app/js/index.js')
         .pipe(concat('all.js'))
+        .pipe(gulp.dest('app/js'))
+        .pipe(browserSync.reload({ stream: true }));
+});
+
+gulp.task('jsprod', function () {
+    return gulp.src('app/js/all.js')
+        .pipe(concat('script.js'))
         .pipe(uglify())
         .pipe(gulp.dest('dist'))
         .pipe(browserSync.reload({ stream: true }));
 });
 
-gulp.task('concatCss', function () {
+gulp.task('sass', function () {
     return gulp.src('app/sass/*.scss')
         .pipe(sass())
         .pipe(concat('all.css'))
@@ -23,9 +31,8 @@ gulp.task('concatCss', function () {
         .pipe(browserSync.reload({ stream: true }));
 });
 
-gulp.task('sass', () => {
-    return gulp.src('app/sass/*.scss')
-        .pipe(sass())
+gulp.task('optimize-css', () => {
+    return gulp.src('app/css/*.css')
         .pipe(concat('style.css'))
         .pipe(cleanCSS())
         .pipe(gulp.dest('dist'))
@@ -63,6 +70,12 @@ gulp.task('optimize-images', function () {
         .pipe(gulp.dest('dist/img'));
 });
 
+gulp.task('html', function() {
+    return gulp.src('app/*.html')
+    .pipe(htmlMin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('dist'))
+})
 
-gulp.task('default', gulp.parallel('minifyConcatScripts', 'sass', 'concatCss', 'server'));
-gulp.task('build', gulp.series('createDist', 'clean', 'minifyConcatScripts', 'sass', 'concatCss', 'optimize-images'));
+
+gulp.task('default', gulp.parallel('js', 'sass', 'server'));
+gulp.task('build', gulp.series('createDist', 'clean', 'jsprod', 'optimize-css', 'optimize-images', 'html'));
