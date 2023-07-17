@@ -40,8 +40,8 @@ gulp.task('optimize-css', () => {
 });
 
 gulp.task('createDist', () => {
-    return gulp.src('app/**/*.html')
-        .pipe(gulp.dest('dist'))
+    return gulp.src('*.*', { read: false })
+        .pipe(gulp.dest('./dist'))
         .pipe(browserSync.reload({ stream: true }));
 });
 
@@ -70,10 +70,10 @@ gulp.task('optimize-images', function () {
         .pipe(gulp.dest('dist/img'));
 });
 
-gulp.task('html', function() {
+gulp.task('html', function () {
     return gulp.src('app/*.html')
-    .pipe(htmlMin({ collapseWhitespace: true }))
-    .pipe(gulp.dest('dist'))
+        .pipe(htmlMin({ collapseWhitespace: true }))
+        .pipe(gulp.dest('dist'))
 })
 
 
