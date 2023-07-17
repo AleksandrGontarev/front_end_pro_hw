@@ -7,11 +7,6 @@ const gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     browserSync = require('browser-sync');
 
-// gulp.task('code', function () {
-//     return gulp.src('app/*.html')
-//         .pipe(browserSync.reload({ stream: true }))
-// });
-
 gulp.task('minifyConcatScripts', function () {
     return gulp.src('app/js/*.js')
         .pipe(concat('all.js'))
@@ -33,6 +28,12 @@ gulp.task('sass', () => {
         .pipe(sass())
         .pipe(concat('style.css'))
         .pipe(cleanCSS())
+        .pipe(gulp.dest('dist'))
+        .pipe(browserSync.reload({ stream: true }));
+});
+
+gulp.task('createDist', () => {
+    return gulp.src('app/**/*.html')
         .pipe(gulp.dest('dist'))
         .pipe(browserSync.reload({ stream: true }));
 });
@@ -63,5 +64,5 @@ gulp.task('optimize-images', function () {
 });
 
 
-gulp.task('default', gulp.parallel('minifyConcatScripts', 'sass', 'concatCss', 'server')); 
-gulp.task('build', gulp.series('clean', 'minifyConcatScripts', 'sass', 'concatCss', 'optimize-images')); 
+gulp.task('default', gulp.parallel('minifyConcatScripts', 'sass', 'concatCss', 'server'));
+gulp.task('build', gulp.series('createDist', 'clean', 'minifyConcatScripts', 'sass', 'concatCss', 'optimize-images'));

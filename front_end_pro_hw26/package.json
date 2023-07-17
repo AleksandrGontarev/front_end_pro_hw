@@ -6,8 +6,9 @@
   "scripts": {
     "stylelint": "npx stylelint \"app/sass/**/*.scss\"",
     "test": "npm run stylelint",
-    "build": "gulp build",
-    "start": "gulp"
+    "start": "gulp",
+    "build": "gulp build"
+   
   },
   "author": "",
   "license": "ISC",
