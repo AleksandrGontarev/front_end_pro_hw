@@ -40,6 +40,7 @@ li {
 .some-form {
   display: none;
 }
+
 .error {
   font-size: 24px;
   position: fixed;
@@ -75,6 +76,7 @@ li {
 .error-btn:hover {
   background-color: goldenrod;
 }
+
 .info-container {
   font-size: 24px;
   position: fixed;
@@ -89,6 +91,7 @@ li {
   margin: 30px auto;
   display: flex;
 }
+
 .product-characters {
   display: flex;
   flex-direction: column;
@@ -104,6 +107,7 @@ li {
   display: block;
   cursor: pointer;
 }
+
 .shop {
   display: grid;
   grid-template-columns: repeat(3, 33.333%);

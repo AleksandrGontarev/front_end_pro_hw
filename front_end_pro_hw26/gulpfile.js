@@ -24,7 +24,7 @@ gulp.task('jsprod', function () {
 });
 
 gulp.task('sass', function () {
-    return gulp.src('app/sass/*.scss')
+    return gulp.src('app/sass/*.+(scss|sass)', {sourcemaps: true})
         .pipe(sass())
         .pipe(concat('all.css'))
         .pipe(gulp.dest('app/css'))
