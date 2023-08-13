@@ -1,0 +1,22 @@
+.header {
+    grid-column: 1 / 6;
+    grid-row: 1;
+    background: #FBD784;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px
+}
+
+.header__menu-item {
+    text-decoration: none;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.header__menu-item:hover {
+    color: white;
+}

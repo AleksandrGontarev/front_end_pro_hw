@@ -1,0 +1,16 @@
+.sidebar-menu {
+    background: rgb(76, 196, 190);
+    grid-column: 1 / 2;
+    height: 100vh;
+}
+
+.sidebar-menu__item {
+    display: block;
+    text-align: center;
+    padding: 15px 0;
+    cursor: pointer;
+}
+
+.sidebar-menu__item:hover {
+    background-color: grey;
+}
