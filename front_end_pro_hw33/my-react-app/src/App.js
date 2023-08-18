@@ -1,7 +1,7 @@
 import './App.css';
 import Head from './components/head';
-import Sidebar from './components/sidebar';
-import Body from './components/body';
+import Sidebar from './components/Sidebar';
+import Body from './components/Body';
 
 const App = () =>  {
   return (
